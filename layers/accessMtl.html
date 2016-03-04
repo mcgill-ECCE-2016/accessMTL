@@ -7,6 +7,7 @@
 
 <link rel="stylesheet" href="https://js.arcgis.com/3.15/dijit/themes/tundra/tundra.css">
 <link rel="stylesheet" href="https://js.arcgis.com/3.15/esri/css/esri.css">
+<script src="http://code.jquery.com/jquery-1.5.js"></script>
 <style>
   html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
   #map { height: 100%; margin: 0; padding: 0; }
@@ -37,34 +38,67 @@
   #loading { 
     float: right;
   }
+      #BasemapToggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 50;
+    }
 </style>
 
 <script src="https://js.arcgis.com/3.15/"></script>
 <script>
-  var map;
-  require([
-    "esri/map", "esri/layers/KMLLayer",
-    "dojo/parser", "dojo/dom-style", 
+ var str = window.location.href;
 
-    "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dojo/domReady!"
-  ], function(
-    Map, KMLLayer, 
-    parser, domStyle
+ var urlKml = str.replace("accessMtl.html", "mainMapKml.php");
+
+ console.log(urlKml);
+ 
+</script>
+<script>
+  var map;
+
+  require([
+    "esri/map",
+	"esri/layers/KMLLayer",
+	"dojo/parser",
+	"dojo/dom-style", 
+
+	"esri/dijit/BasemapToggle",
+    "dijit/layout/BorderContainer",
+	"dijit/layout/ContentPane",
+	
+	"dojo/domReady!"
+  ], 
+  function(
+    Map,
+	KMLLayer, 
+    parser,
+	domStyle,
+	BasemapToggle
   ) {
-    map = new Map("map", { 
-      basemap: "topo",
-      center: [-73.57941804326065,45.50589273223628],
-      zoom: 6
+    map = new Map("map", {  
+      basemap: "dark-gray",
+      center: [-73.6837137541535,45.54319611681475],
+      zoom: 12
     });
 
     parser.parse();
-
-    var kmlUrl = "layers/mainMapKml.php";
+    var kmlUrl = urlKml;
     var kml = new KMLLayer(kmlUrl); 
     map.addLayer(kml);
     kml.on("load", function() {
       domStyle.set("loading", "display", "none");
     });
+	
+	 var toggle = new BasemapToggle({
+        map: map,
+        basemap: "national-geographic"
+      }, "BasemapToggle");
+      toggle.startup();
+
+ 
+	
   });
 </script>
 </head>
@@ -77,12 +111,13 @@
        data-dojo-type="dijit/layout/ContentPane" 
        data-dojo-props="region:'center'"> 
     <div id="meta">
-      <span id="loading"><img src="images/loading_black.gif" /></span>
+      <span id="loading"><img src="../images/loading_black.gif" /></span>
       <h3>Display KML Using a <a href="https://developers.arcgis.com/javascript/jsapi/kmllayer-amd.html">KMLLayer</a></h3>
       <br />
       The map displays a simple KML file that was created using Google Earth and
       is hosted on an Esri server. Symbology and attributes are honored.
     <div>
+    <div id="BasemapToggle"></div>
   </div>
 </div>
 </body>

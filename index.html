@@ -37,41 +37,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Vegetable Farm Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-    
-    <!-- vendor css links -->
+
+    <!-- css links -->
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="vendor/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" type="text/css" href="vendor/css/caption-hover.css" />
     <link rel="stylesheet" type="text/css" href="vendor/css/circle-hover.css" />
-    <link href="vendor/css/slider.css" rel="stylesheet" type="text/css" media="all">/
+    <link href="vendor/css/slider.css" rel="stylesheet" type="text/css" media="all">
     <link href="vendor/css/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href='//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-    <!-- /css links -->
-    
-    <!-- css links -->
+    <link href="myModules/infoWindow.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet" type="text/css" />
     <!-- /css links -->
+  
+    <!-- Javascript links -->
     <script src="vendor/js/jquery.min.js"></script>
-<script src="vendor/js/bootstrap.min.js"></script>
-    <!-- ArcGIS API links -->
-        <link rel="stylesheet" href="https://js.arcgis.com/3.15/esri/css/esri.css">
-        
-        
-        <script>
-  var dojoConfig = { isDebug: true };
-</script>
-        <script src="https://js.arcgis.com/3.15/"></script>
-    <!-- /ArcGIS API links links -->
-
-    <!-- vendor Javascript links -->
+	<script src="vendor/js/bootstrap.min.js"></script>
 	<script src="vendor/js/SmoothScroll.min.js"></script>
     <script type="text/javascript" src="vendor/js/modernizr.custom.js"></script> 
-    <!-- /Javascript links -->
-    
-    <!-- javascript links -->
     <script type="text/javascript" src="js/index.js"></script> 
     <!-- /javascript links -->
     
@@ -106,20 +88,36 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       </div>
     </nav>
 <!-- /Fixed navbar -->	
+
 <!-- Banner -->
 <div class="banner">
-<br />
-<br />
-<img src="vendor/images/banner1.png" />
+        <h2>Welcome to Access Montréal (AccessMTL)</h2>
+        <img id="homepage_banner" src="http://accessmtl.ca/images/homepage_banner.jpg">
+            <p class="upperP">AccessMTL is a platform for Montreal citizens to call attention to accessibility 
+            issues in the city. While Montreal may represent a cultural hub of innovation in Canada, 
+            it bears an inversely proportional reputation for the inaccessibility of its built environment.
+            Users will be able to contribute to a reference map for other users while highlighting points 
+            that need improvement. By contributing accessibility ratings based on personal experiences, Montreal
+            will be able to better work towards creating a more inclusive and socially sustainable urban environment for all of its citizens.</p>   
+        <p class="lowerP">Our interactive map application is hosted here for users to be able to search locations by 
+        accessibility and provide feedback to the Montreal community about the resources found in our city.</p>
 </div>
 <!-- /Banner -->
-<!-- About -->
+
+
+
+<!-- Map Container -->
+<div class="map-container">
 <section class="map-container" id="map-cont">
 	<h3 class="text-center slideanim">Interactive Map</h3>
+    <p>This interactive map showcases the Universal Accessibility features of Points of Interest on the Island of Montreal</p>
     <div class="container">
-       <div id="AMmap"></div> <!-- Arc API Map -->
+     <iframe width="100%" height="100%" src="http://accessmtl.ca/maps/accessMtl.html"></iframe>
+       <div id="mainWidget">
     </div>
+    <p>Data featured on this map is contributed by users and may not reflect the wishes of the businesses featured.</p>
 </section>
+</div>
 <!-- /About -->
 
 

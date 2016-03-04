@@ -3,23 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
-<title>AccessMTL Main Map</title>
+<title></title>
 
 <link rel="stylesheet" href="https://js.arcgis.com/3.15/dijit/themes/tundra/tundra.css">
 <link rel="stylesheet" href="https://js.arcgis.com/3.15/esri/css/esri.css">
 <style>
   html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
-  #map { 
-  	height: 900px; 
-	margin: 0; 
-	padding: 0; }
-  
-  #widget {
+  #map { height: 100%; margin: 0; padding: 0; }
+  #meta {
     position: absolute;
-    right: 5px;
-    top: 10px;
-    width: 70%;
-    height: 30px;
+    left: 20px;
+    bottom: 20px;
+    width: 300px;
+    height: 100px;
     z-index: 40;
     background: #fff;
     color: #777;
@@ -31,29 +27,12 @@
     font-family: arial;
     font-size: 0.9em;
   }
-  #widget h3 {
+  #meta h3 {
     color: #666;
     font-size: 1.1em;
     padding: 0px;
     margin: 0px;
     display: inline-block;
-  }
-  #activeTitle {
-    position: absolute;
-	top: 50px;
-    right: 2px;
-    width: 200px;
-    height: 70px;
-    z-index: 40;
-    background: #fff;
-    color: #777;
-    padding: 5px;
-    border: 2px solid #666;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px; 
-    font-family: arial;
-    font-size: 0.9em;
   }
   #loading { 
     float: right;
@@ -61,71 +40,34 @@
 </style>
 
 <script src="https://js.arcgis.com/3.15/"></script>
-<script src="vendor/js/jquery.min.js"></script>
-
 <script>
- var map;
- 	var layers = [];
-	layers[0] = {index: "0", title: "Cultural Sites", url: "x"};
-	layers[1] = {index: "0", title: "McGill Security", url: "http://mcgillgis.maps.arcgis.com/sharing/rest/content/items/074acabbb3e745ef8898562b55e44996/data"};
-	
-	
+  var map;
   require([
-    "esri/map",
-	"esri/layers/KMLLayer",
-    "dojo/parser",
-	"dojo/dom-style", 
-	"dojo/dom",
-	"dojo/on",
-	"esri/tasks/query",
-	"esri/tasks/QueryTask",
-    "dijit/layout/BorderContainer",
-	"dijit/layout/ContentPane",
-	"dojo/domReady!"
+    "esri/map", "esri/layers/KMLLayer",
+    "dojo/parser", "dojo/dom-style", 
+
+    "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dojo/domReady!"
   ], function(
-    Map,
-	KMLLayer, 
-	parser,
-	domStyle,
-	dom,
-	on,
-	Query,
-	QueryTask	
+    Map, KMLLayer, 
+    parser, domStyle
   ) {
-	  
-	  
     map = new Map("map", { 
       basemap: "topo",
       center: [-73.57941804326065,45.50589273223628],
       zoom: 6
     });
 
-
-// parser.parse();
-	
-	on(dom.byId("CULTURE"), "click", toggleLayer());
+    parser.parse();
 
     var kmlUrl = "http://mcgillgis.maps.arcgis.com/sharing/rest/content/items/074acabbb3e745ef8898562b55e44996/data";
     var kml = new KMLLayer(kmlUrl); 
+    map.addLayer(kml);
     kml.on("load", function() {
       domStyle.set("loading", "display", "none");
     });
-	
-	function toggleLayer() {
-		console.log('oob');
-		var kml = new KMLLayer(layers[1].url); 
-		map.addLayer(kml);
-		$('#activeName').text(layers[1].title);
-	}
-
-	
   });
-  
-
 </script>
-
 </head>
-
 
 <body class="tundra">
 <div data-dojo-type="dijit/layout/BorderContainer" 
@@ -134,14 +76,14 @@
   <div id="map" 
        data-dojo-type="dijit/layout/ContentPane" 
        data-dojo-props="region:'center'"> 
-       
-    <div id="widget">
-      <span id="loading"></span>
-		<input id="CULTURE" type="button" value="Cultural Sites"><div id="activeName"></div>
+    <div id="meta">
+      <span id="loading"><img src="images/loading_black.gif" /></span>
+      <h3>Display KML Using a <a href="https://developers.arcgis.com/javascript/jsapi/kmllayer-amd.html">KMLLayer</a></h3>
+      <br />
+      The map displays a simple KML file that was created using Google Earth and
+      is hosted on an Esri server. Symbology and attributes are honored.
     <div>
   </div>
 </div>
 </body>
-
 </html>
-	
