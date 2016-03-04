@@ -5,6 +5,9 @@ $csv = array_map('str_getcsv', file('uas_db.csv'));
 $lengthArray = sizeof($csv);
 
 
+$level = $_GET['level'];
+
+
 // Top of KML File ========================================================================================================================================================
 $kml = array('<?xml version="1.0" encoding="UTF-8"?>');
 $kml[] = '<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">';
@@ -72,6 +75,9 @@ if ($csv[$i][18] == "b")
 {
 	$metaScore[$i]++;	
 }
+
+if ((($level == "high") && ($metaScore[$i] > 11)) || (($level == "med") && (($metaScore[$i] <= 11) &&($metaScore[$i] > 6))) || (($level == "low") && ($metaScore[$i] <= 6)) || ($level == "all"))
+{
 
 $kml[] = ' 	<Placemark id="' . $csv[$i][2] .'">';
 $kml[] = ' 		<name>' . $csv[$i][2] . '</name>';
@@ -195,7 +201,7 @@ $kml[] = '     <coordinates>' . $csv[$i][26] . ',' . $csv[$i][27] . ',0 </coordi
 $kml[] = ' </Point>';
 $kml[] = '</Placemark>';
 $kml[] = ' ';
-}
+}}
 
 $kml[] = ' </Document>';
 $kml[] = ' </kml>';
