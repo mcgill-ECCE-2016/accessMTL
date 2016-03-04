@@ -84,7 +84,7 @@ This file is part of AccessMTL.
 	<!-- url query and kml locate  -->
 	<script>
      var str = window.location.href;
-     var urlKml = str.replace("accessMtl.html", "mainMapKml.php");
+     var urlKml = str.replace("accessMtl.html", "mainMapKmlLevel.php?level=all");
     </script>
     <!-- /url query and kml locate  -->
  
@@ -142,16 +142,32 @@ This file is part of AccessMTL.
 	  
 	   on(dom.byId("legend"), "click", function(evt) {
             if ( evt.target.id === "HIGH" ) {
-             map.removeLayer(kml)
+             map.removeLayer(kml);
+			 urlKml = urlKml.substr(0, urlKml.indexOf('?'));
+			 urlKml += '?level=high';
+			 kml = new KMLLayer(urlKml);
+			 map.addLayer(kml);
 			}
 			if ( evt.target.id === "MED" ) {
-             map.removeLayer(kml)
+             map.removeLayer(kml);
+			 urlKml = urlKml.substr(0, urlKml.indexOf('?'));
+			 urlKml += '?level=med';
+ 			 kml = new KMLLayer(urlKml);
+			 map.addLayer(kml);
 			}
 			if ( evt.target.id === "LOW" ) {
-             map.removeLayer(kml)
+             map.removeLayer(kml);
+			 urlKml = urlKml.substr(0, urlKml.indexOf('?'));
+			 urlKml += '?level=low';
+ 			 kml = new KMLLayer(urlKml);
+			 map.addLayer(kml);
 			}
 			if ( evt.target.id === "ALL" ) {
-             map.addLayer(kml)
+             map.removeLayer(kml);
+			 urlKml = urlKml.substr(0, urlKml.indexOf('?'));
+			 urlKml += '?level=all';
+ 			 kml = new KMLLayer(urlKml);
+			 map.addLayer(kml);
 			}
 		});
  
