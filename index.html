@@ -41,8 +41,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- css links -->
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="vendor/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="stylesheet" type="text/css" href="vendor/css/caption-hover.css" />
-    <link rel="stylesheet" type="text/css" href="vendor/css/circle-hover.css" />
     <link href="vendor/css/slider.css" rel="stylesheet" type="text/css" media="all">
     <link href="vendor/css/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="myModules/infoWindow.css" rel="stylesheet">
@@ -82,7 +80,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<li><a href="#map-cont">Map</a></li>
 				<li><a href="#contribute">Contribute</a></li>
 				<li><a href="#resources">Resources</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<li><a href="#about">About Us</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -93,14 +91,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="banner">
         <h2>Welcome to Access Montréal (AccessMTL)</h2>
         <img id="homepage_banner" src="http://accessmtl.ca/images/homepage_banner.jpg">
-            <p class="upperP">AccessMTL is a platform for Montreal citizens to call attention to accessibility 
-            issues in the city. While Montreal may represent a cultural hub of innovation in Canada, 
+            <p class="upperP">AccessMTL is an interactive mapping platform for Montreal citizens to call attention to accessibility issues in the city. While Montreal may represent a cultural hub of innovation in Canada, 
             it bears an inversely proportional reputation for the inaccessibility of its built environment.
             Users will be able to contribute to a reference map for other users while highlighting points 
             that need improvement. By contributing accessibility ratings based on personal experiences, Montreal
             will be able to better work towards creating a more inclusive and socially sustainable urban environment for all of its citizens.</p>   
-        <p class="lowerP">Our interactive map application is hosted here for users to be able to search locations by 
-        accessibility and provide feedback to the Montreal community about the resources found in our city.</p>
+        <p class="lowerP">The interactive map application is hosted here for users to be able to search locations by accessibility and provide feedback to the Montreal community about the resources and destinations found in the city.<br><br />
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/NpjrHFrW09I" frameborder="0" allowfullscreen></iframe></p>
 </div>
 <!-- /Banner -->
 
@@ -124,74 +121,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 <!-- /Services -->
-<section class="contribute" id="contribute">
+<section class="map-container" id="contribute">
     <h3 class="text-center slideanim">Contribute to the Access MTL Map</h3>
-    <div id="cont-wrapper">
-        <div id="cont-left">
-            <ul class="ch-grid">
-                <li>
-                    <div class="ch-item ch-img-1 slideanim">				
-                        <div class="ch-info-wrap">
-                            <div class="ch-info">
-                                <div class="ch-info-front ch-img-1"></div>
-                                <div class="ch-info-back">
-                                    <h5>Accessible Consumerism</h5>
-                                    <p>Where to shop, eat, live</p>
-                                </div>	
-                            </div>
-                        </div>
-                    </div>
-                    <h4 class="slideanim">Day-to-Day</h4>
-                </li>
-                <li>
-                    <div class="ch-item ch-img-2 slideanim">
-                        <div class="ch-info-wrap">
-                            <div class="ch-info">
-                                <div class="ch-info-front ch-img-2"></div>
-                                <div class="ch-info-back">
-                                    <h5>Family Friendliness</h5>
-                                    <p>Products and services suitable for all family members.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h4 class="slideanim">Family Friendliness</h4>
-                </li>
-                <li>
-                    <div class="ch-item ch-img-3 slideanim">
-                        <div class="ch-info-wrap">
-                            <div class="ch-info">
-                                <div class="ch-info-front ch-img-3"></div>
-                                <div class="ch-info-back">
-                                    <h5>Strip Clubs</h5>
-                                    <p>Get yo freak on</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h4 class="slideanim">Family Friendliness</h4>
-                </li>
-                <li>
-                    <div class="ch-item ch-img-4 slideanim">
-                        <div class="ch-info-wrap">
-                            <div class="ch-info">
-                                <div class="ch-info-front ch-img-4"></div>
-                                <div class="ch-info-back">
-                                    <h5>Miscellaneous POI</h5>
-                                    <p>All other relevant data</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h4 class="slideanim">Miscellaneous POI</h4>
-                </li>
-            </ul>
-        </div>
-        <div id="cont-right">
-            <ul class="cont_map">
-                <div id="CONTmap"></div>
-            </ul>
-        </div>
+    <div class="container2">
+         <iframe width="100%" height="100%" src="http://accessmtl.ca/layers/contmap.html"></iframe>
 	</div>
 </section>
 <!-- /Services -->
@@ -200,392 +133,52 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <!-- resources Grid Section -->
 <section id="resources">
-	<h3 class="text-center slideanim">Our resources</h3>
+	<h3 class="text-center slideanim">Resource List</h3>
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12 resources-item slideanim">
-                <a href="#resourcesModal1" class="resources-link" data-toggle="modal">
-					<div class="caption">
-						<div class="caption-content">
-							<i class="fa fa-paper-plane-o"></i>
-						</div>
-					</div>
-					<img src="vendor/images/port1.jpg" class="img-responsive" alt="">
-				</a>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 resources-item slideanim">
-                <a href="#resourcesModal2" class="resources-link" data-toggle="modal">
-					<div class="caption">
-                        <div class="caption-content">
-							<i class="fa fa-paper-plane-o"></i>
-                        </div>
-					</div>
-                    <img src="vendor/images/port2.jpg" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 resources-item slideanim">
-                <a href="#resourcesModal3" class="resources-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-paper-plane-o"></i>
-                        </div>
-                    </div>
-                    <img src="vendor/images/port3.jpg" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 resources-item slideanim">
-                <a href="#resourcesModal4" class="resources-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-paper-plane-o"></i>
-                        </div>
-                    </div>
-                    <img src="vendor/images/port4.jpg" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 resources-item slideanim">
-				<a href="#resourcesModal5" class="resources-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-paper-plane-o"></i>
-                        </div>
-                    </div>
-                    <img src="vendor/images/port5.jpg" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 resources-item slideanim">
-                <a href="#resourcesModal6" class="resources-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-paper-plane-o"></i>
-                        </div>
-                    </div>
-					<img src="vendor/images/port6.jpg" class="img-responsive" alt="">
-                </a>
-            </div>
-        </div>
+     <div id="white">  
+  <p>  <h3>Here's a short list of resources that both inspired and guided our thinking and developing process:</h3></p>
+<br />
+<p>The City of Calgary's <a href="https://www.calgary.ca/CSPS/CNS/Documents/universal_design_handbook.pdf?noredirect=1"> Universal Design Handbook</a>. - a cohesive, user-friendly introduction to Universal Design concepts:</p><br /><br />
+
+
+<p>Resources from the United Kingdom's <a href="http://www.attitudeiseverything.org.uk/resources">Attitude Is Everything</a>, an organization that aims to improve deaf and disabled people's access to music. Includes case studies, publications, practical guides, and campaign resources: </p><br /><br />
+
+
+<p><a href="http://www.disabledgo.com/">DisabledGO</a> - a website with a similar idea and functionality for services and destinations in the United Kingdom.</p><br /><br />
+
+
+<p>"Is This Venue Accessible?" - A blog dedicated to providing detailed information about accessibility at show venues around the world.</p><br /><br />
+
+
+<p>An opinion piece from Montreal's Gazette on the <a href="http://montrealgazette.com/news/local-news/opinion-montreal-has-a-long-way-to-go-on-accessibility">(in)accessibility of Montreal:</a></p>
+
+
+
+</p>
+</div>
     </div>
 </section>
 <!-- /resources Grid Section -->
 
 
-<!-- resources Modals -->
-<div class="resources-modal modal fade slideanim" id="resourcesModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-			<div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                        <h3>Vegetable Farm</h3>
-						<hr>
-                        <img src="vendor/images/port1.jpg" class="img-responsive img-centered" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="resources-modal modal fade slideanim" id="resourcesModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                        <h3>Vegetable Farm</h3>
-                        <hr>
-                        <img src="vendor/images/port2.jpg" class="img-responsive img-centered" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-<div class="resources-modal modal fade slideanim" id="resourcesModal3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                        <h3>Vegetable Farm</h3>
-                        <hr>
-                        <img src="vendor/images/port3.jpg" class="img-responsive img-centered" alt="">
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="resources-modal modal fade slideanim" id="resourcesModal4" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-			<div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                        <h3>Vegetable Farm</h3>
-                        <hr>
-                        <img src="vendor/images/port4.jpg" class="img-responsive img-centered" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="resources-modal modal fade slideanim" id="resourcesModal5" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                        <h3>Vegetable Farm</h3>
-                        <hr>
-                        <img src="vendor/images/port5.jpg" class="img-responsive img-centered" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="resources-modal modal fade slideanim" id="resourcesModal6" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                        <h3>Vegetable Farm</h3>
-                        <hr>
-                        <img src="vendor/images/port6.jpg" class="img-responsive img-centered" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- /resources Modals -->
-
-
-
-<!-- Blog -->
-<section class="our-blog" id="blog">
-	<h3 class="text-center slideanim">Our Blog</h3>
-    <div class="container">
-		<div class="row">
-			<div class="col-md-3 col-xs-12">
-				<div class="view view-seventh slideanim">
-                    <img src="vendor/images/blog1.jpg" alt="" class="img-responsive"/>
-                    <div class="mask">
-                        <h5>January 2,2016</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-						<a href="#contact-info" class="info">Write To Us</a>
-                    </div>
-                </div>
-				<div class="blog-content slideanim">
-					<p class="p1">News - January 2,2016</p>
-					<a href="#"><h4>Its The Vegetable Farm You Can See.</h4></a>
-					<p class="p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-				</div>
-			</div>
-			<div class="col-md-3 col-xs-12">
-				<div class="view view-seventh slideanim">
-                    <img src="vendor/images/blog2.jpg" alt="" class="img-responsive"/>
-                    <div class="mask">
-                        <h5>January 10,2016</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-						<a href="#contact-info" class="info">Write To Us</a>
-                    </div>
-                </div>
-				<div class="blog-content slideanim">
-					<p class="p1">News - January 10,2016</p>
-					<a href="#"><h4>A Day With Vegetable Farm.</h4></a>
-					<p class="p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-				</div>
-			</div>
-			<div class="col-md-3 col-xs-12">
-				<div class="view view-seventh slideanim">
-                    <img src="vendor/images/blog3.jpg" alt="" class="img-responsive"/>
-                    <div class="mask">
-                        <h5>January 15,2016</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-						<a href="#contact-info" class="info">Write To Us</a>
-                    </div>
-                </div>
-				<div class="blog-content slideanim">
-					<p class="p1">News - January 15,2016</p>
-					<a href="#"><h4>Vegetable Farm For All.</h4></a>
-					<p class="p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-				</div>
-			</div>
-			<div class="col-md-3 col-xs-12">
-				<div class="view view-seventh slideanim">
-                    <img src="vendor/images/blog4.jpg" alt="" class="img-responsive"/>
-                    <div class="mask">
-                        <h5>January 20,2016</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-						<a href="#contact-info" class="info">Write To Us</a>
-                    </div>
-                </div>
-				<div class="blog-content slideanim">
-					<p class="p1">News - January 20,2016</p>
-					<a href="#"><h4>Vegetable Farm For Your Life.</h4></a>
-					<p class="p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- /Blog -->
-
-
-
 
 <!-- Contact-Us -->
-<section class="contact-us" id="contact">
-	<h3 class="text-center slideanim">Contact Us</h2>
+<section class="contact-us" id="about">
+	<h3 class="text-center">About the Project</h2>
 	<div class="container">
-		<div class="row">
-            <div class="col-md-8 col-xs-12 slideanim">
-                <iframe class="googlemaps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d380510.6741687111!2d-88.01234121699822!3d41.83390417061058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1455598377120" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-4 col-xs-12 slideanim">
-				<h4>Our Contacts :</h4>
-                <p>Phone:123.456.7890</p>
-                <p>Email:<a href="mailto:name@example.com">name@example.com</a></p>
-                <p>Address:3481 Melrose Place,Beverly Hills, Chicago 90210.</p>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
+		<div id="wrapper2"><div id="img_left"><img src="images/team_photo.jpg" height="500px"/></div><div id="text_right"><p>AccessMTL is an interactive mapping platform for Montreal citizens to call attention to accessibility issues in the city. As a "Citizen Science" initiative, users will be able to contribute to a reference map for other users while highlighting points that need improvement. While Montreal may represent a cultural hub of innovation in Canada, it bears an inversely proportional reputation for the inaccessibility of its built environment. By contributing accessibility ratings based on personal experiences, Montreal will be able to better work towards creating a more inclusive and socially sustainable urban environment for all of its citizens.</p></div>
+    </div></div>
 </section>
 <!-- /Contact-Us -->
 <!-- Contact-Form -->	
 <section class="contact-form" id="contact-info">
-	<h3 class="text-center slideanim">Contact Form</h3>
-	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 slideanim">
-				<form role="form">
-					<div class="row">
-						<div class="form-group col-lg-4">
-							<label>Name</label>
-							<input type="text" class="form-control">
-						</div>
-						<div class="form-group col-lg-4">
-							<label>Email Address</label>
-							<input type="email" class="form-control">
-						</div>
-						<div class="form-group col-lg-4">
-							<label>Phone Number</label>
-							<input type="tel" class="form-control">
-						</div>
-						<div class="clearfix"></div>
-						<div class="form-group col-lg-12">
-							<label>Message</label>
-							<textarea class="form-control" rows="6"></textarea>
-						</div>
-						<div class="form-group col-lg-12">
-							<button type="submit" href="#" class="btn btn-lg btn-outline">Submit</button>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+	<h3 class="text-center slideanim">About Us</h3>
+	<pLorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	
 </section>	
 <!-- /Contact-Form -->
 
 
-
-<!-- Footer -->
-<footer class="text-center slideanim">
-    <div class="footer-above">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col col-md-4">
-                    <h4>Location</h4>
-                    <p>3481 Melrose Place<br>Beverly Hills, Chicago 90210</p>
-                </div>
-                <div class="footer-col col-md-4">
-                    <h4>Around the Web</h4>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col col-md-4">
-                    <h4>About Vegetable Farm</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                </div>
-            </div>
-        </div>
-	</div>
-    <div class="footer-below">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>© 2016 Vegetable Farm. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
-                </div>
-            </div>
-        </div>
-		<a href="#AccessMTL" title="To Top">
-			<span class="glyphicon glyphicon-chevron-up"></span>
-		</a>
-    </div>
-</footer>
 <!-- js files -->
 <script src="vendor/js/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>

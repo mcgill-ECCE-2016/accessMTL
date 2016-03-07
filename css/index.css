@@ -23,6 +23,7 @@
 
 .headerimg {
 	float: left;	
+	background:#F9FEBC
 }
 
 .headerText {
@@ -43,6 +44,7 @@
 #cont-wrapper {
 	width: 98%;
 	overflow: hidden;
+	padding-left: 25%;
 }
 
 #cont-left{
@@ -54,9 +56,10 @@
 
 #cont-right {
 	float: left;
-	width: 60%;
+	width: 98%
 	padding-left: 4%;
 	padding-right: 4%;
+	height: 800px
 }
 
 .map-container {
@@ -76,6 +79,14 @@
 	padding-left: 0px;
 	padding-right: 0px;
 }
+
+.map-container div.container2 {
+	background: white;
+	width: 1180px;
+	height: 815px;
+	margin: auto;
+}
+
 
 .navbar-brand {
 	padding: 1px;
@@ -108,7 +119,9 @@
 }
 
 section.contribute {
+	background-size: 100% auto !important
 	background: url(../images/uqam_stairs.jpg) !important;
+	height: 1080px;
 }
 
 .headImg {
@@ -161,4 +174,24 @@ section.contribute {
 	text-align: center !important;
 	color: aliceblue;
 	padding-top: 110px;
+}
+
+#text_right{
+	float: left;
+}
+
+#img_left {
+	float: left;
+}
+
+
+
+#white p {
+   text-align: center !important;
+   font-size: 18px !important;
+   font-family: dinreg !important;
+   padding-left: 20%;
+   padding-right: 20%;
+   color: white;
+   padding-bottom: 10px;
 }
